@@ -1,0 +1,300 @@
+<div class = "section s1">
+    <div class = "inner">
+        <div class = "slider">
+            <ul class = "rslides">
+                <?php foreach ($this->results as $key => $result) {
+                    ?>
+
+                    <li>
+                        <div class="image">
+                            <img src="<?php echo $this->baseUrl() . "/images/slider/b_" . $result['SImage'] ?>" />
+                            <div class="box">
+
+                                <hr>
+                                <div class="text">
+                                    <h1><?php echo $result["SName" . $this->sufix] ?></h1>
+                                    <p><?php echo $result["SText" . $this->sufix] ?></p>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </li>
+                <?php } ?>
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="section s2">
+    <div class="inner">
+        <h1><?php echo ($this->parameters["lang"] == "en") ? 'About Us' : 'Quienes Somos'; ?></h1>
+        <div class="middle">
+            <p style="padding-right: 20px;"><?php echo nl2br($this->aboutus["AColLeft" . $this->sufix]); ?></p>
+        </div>
+        <div class="middle">
+            <p><?php echo nl2br($this->aboutus["AColRight" . $this->sufix]); ?></p> 
+            <h1><?php echo $this->aboutus["AFirm" . $this->sufix]; ?></h1>
+        </div>
+    </div>
+
+</div>
+
+<div class="section s3">
+    <div class="inner">
+
+        <h1><?php echo ($this->parameters["lang"] == "en") ? 'Rooms' : 'Habitaciones'; ?></h1>
+        <?php
+        $c = 0;
+        foreach ($this->rooms as $room) {
+            $c++;
+            $marginR = (($c % 2) != 0) ? 'style="margin-right: 20px;"' : '';
+            if ($room["IName"]) {
+                ?>
+                <div class="col" <?php echo $marginR; ?>>
+                    <div class="title"><?php echo $room["RName" . $this->sufix]; ?></div>
+                    <div class="box" >
+                        <div class="image" >
+                            <div class="view"><?php echo ($this->parameters["lang"] == "en") ? 'view gallery' : 'ver galería'; ?></div>
+                            <a title="<?php echo $room["RName" . $this->sufix]; ?>"  class="fancybox fancybox.iframe" href="<?php
+                            echo $this->url(array(
+                                'module' => $this->parameters['module'],
+                                'controller' => 'room',
+                                'action' => 'get', 'id' => $room["IDRoom"], 'lang' => $this->parameters["lang"]));
+                            ?>">
+                                <img src="<?php echo $this->baseUrl() . "/images/room/m_" . $room["IName"] ?>">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            <?php
+            }
+        }
+        ?>
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+<div class="section s4">
+
+    <div class="inner">
+
+        <h1><?php echo ($this->parameters["lang"] == "en") ? 'Rate/Reserves' : 'Tarifario/Reservas'; ?></h1>
+        <?php
+        foreach ($this->rooms as $room) {
+            if ($room["RTariferNumber"] > 0) {
+                ?>
+                <div class="col_4">
+                    <div class="title"><?php echo $room["RName" . $this->sufix] ?> </div>
+                    <div class="boxImage">
+                        <div class="price">
+        <?php echo $room["RTarifer"] ?><br>
+                            <hr>
+                            <label><?php echo ($this->parameters["lang"] == "en") ? 'Price' : 'Precio'; ?><br><?php echo ($this->parameters["lang"] == "en") ? 'per day' : 'por día'; ?></label>
+                        </div>
+                        <div class="view"><?php echo ($this->parameters["lang"] == "en") ? 'view gallery' : 'ver galería'; ?> </div>
+                        <?php if ($room["IName"]) { ?>
+                            <a title="<?php echo $room["RName" . $this->sufix]; ?>"  class="fancybox fancybox.iframe" href="<?php
+                            echo $this->url(array(
+                                'module' => $this->parameters['module'],
+                                'controller' => 'room',
+                                'action' => 'get', 'id' => $room["IDRoom"], 'lang' => $this->parameters["lang"]));
+                            ?>">
+                                <img src="<?php echo $this->baseUrl() . "/images/room/m_" . $room["IName"] ?>">
+                            </a>
+        <?php } else { ?>
+                            <a title="javascript:void(0);">
+                                <img src="<?php echo $this->baseUrl() . "/images/room/default.jpg"; ?>">
+                            </a>
+        <?php } ?>
+                    </div>
+                </div>
+                <?php
+            }
+        }
+        ?>
+        <div class="clear"></div>
+        <br>
+        <hr>
+        <h2><?php echo ($this->parameters["lang"] == "en") ? 'Our services' : 'Nuestros servicios'; ?></h2>
+        <div class="service">
+            <img src="<?php echo $this->baseUrl() . "/imgs/servicios_tv.png"; ?>" /><br>
+<?php echo ($this->parameters["lang"] == "en") ? 'TELEVISION' : 'TELEVISIÓN'; ?>
+        </div>
+        <div class="service">
+            <img src="<?php echo $this->baseUrl() . "/imgs/servicios_desayuno.png"; ?>" /><br>
+<?php echo ($this->parameters["lang"] == "en") ? 'BREAKFAST' : 'DESAYUNO'; ?>
+        </div>
+        <div class="service">
+            <img src="<?php echo $this->baseUrl() . "/imgs/servicios_bano.png"; ?>" /><br>
+<?php echo ($this->parameters["lang"] == "en") ? 'BATH ROOM' : 'BAÑO PRIVADO'; ?>
+        </div>
+        <div class="service">
+            <img src="<?php echo $this->baseUrl() . "/imgs/servicios_estacionamiento.png"; ?>" /><br>
+<?php echo ($this->parameters["lang"] == "en") ? 'PARKING' : 'ESTACIONAMIENTO'; ?>
+        </div>
+        <div class="service">
+            <img src="<?php echo $this->baseUrl() . "/imgs/servicios_calefaccion.png"; ?>" /><br>
+<?php echo ($this->parameters["lang"] == "en") ? 'HEATING' : 'CALEFACCIÓN'; ?>
+        </div>
+        <div class="service">
+            <img src="<?php echo $this->baseUrl() . "/imgs/servicios_internet.png"; ?>" /><br>
+<?php echo ($this->parameters["lang"] == "en") ? 'INTERNET' : 'INTERNET'; ?>
+        </div>
+        <div class="service">
+            <img src="<?php echo $this->baseUrl() . "/imgs/servicios_lavanderia.png"; ?>" /><br>
+<?php echo ($this->parameters["lang"] == "en") ? 'LAUNDRY' : 'LAVANDERÍA'; ?>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <div class="col_2">
+            <h2><?php echo ($this->parameters["lang"] == "en") ? 'Reserve methods' : 'Medios de Reserva'; ?></h2>
+            <div class="clear"></div>
+            <hr>
+            <br>
+<?php echo nl2br($this->contact["CPhone"]) ?><br>
+            E-Mail: <a href='mailto:<?php echo $this->contact["CEmail"] ?>'><?php echo $this->contact["CEmail"] ?></a>
+        </div>
+        <div class="col_2">
+            <h2><?php echo ($this->parameters["lang"] == "en") ? 'Means of payment' : 'Medios de Pago'; ?></h2>
+            <div class="clear"></div>
+            <hr>
+            <br>
+            <a class="button popup fancybox fancybox.iframe" title="<?php echo ($this->parameters["lang"] == "en") ? 'Bank Deposit' : 'Depósito Bancario'; ?>"  href="<?php
+            echo $this->url(array(
+                'module' => $this->parameters['module'],
+                'controller' => 'parameter',
+                'action' => 'bank', 'lang' => $this->parameters["lang"]));
+            ?>"><?php echo ($this->parameters["lang"] == "en") ? 'Bank Deposit' : 'Depósito Bancario'; ?></a>
+            <a class="button popup fancybox fancybox.iframe" title="<?php echo ($this->parameters["lang"] == "en") ? 'Credit Card' : 'Tarjetas de Crédito'; ?>" style="float: right;margin-right: 10px;" href="<?php
+            echo $this->url(array(
+                'module' => $this->parameters['module'],
+                'controller' => 'parameter',
+                'action' => 'card', 'lang' => $this->parameters["lang"]));
+            ?>"><?php echo ($this->parameters["lang"] == "en") ? 'Credit Card' : 'Tarjetas de Crédito'; ?></a>
+            <a class="button popup fancybox fancybox.iframe" title="<?php echo ($this->parameters["lang"] == "en") ? 'Credit Card' : 'Tarjetas de Crédito'; ?>" style="float: right;margin-right: 10px;" href="<?php
+            echo $this->url(array(
+                'module' => $this->parameters['module'],
+                'controller' => 'parameter',
+                'action' => 'mp', 'lang' => $this->parameters["lang"]));
+            ?>">Mercado Pago</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+</div>
+<div class="section s5" id='s5_content'>
+    <div class="inner">
+        <div class="col_2">
+            <h1><?php echo ($this->parameters["lang"] == "en") ? 'Location' : 'Ubicación'; ?></h1>
+            <div style="width:auto; height: 580px; color: #000; margin-right: 20px;">
+                <iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Guemes%20301%20san%20jose%20mendoza+(Hotel%20El%20Nevado)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+            
+        </div>
+        <div class="col_2">
+            <h1 class="contact"><?php echo ($this->parameters["lang"] == "en") ? 'Contact' : 'Contacto'; ?></h1>
+            <form method="post" id="contact">
+                <div class="line">
+                    <div class="label">E-Mail *</div>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="clear"></div>
+                <div class="line">
+                    <div class="label"><?php echo ($this->parameters["lang"] == "en") ? 'Name' : 'Nombre'; ?> *</div>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="clear"></div>
+                <div class="line">
+                    <div class="label"><?php echo ($this->parameters["lang"] == "en") ? 'Subject' : 'Asunto'; ?> *</div>
+                    <input type="text" name="subject" id="subject">
+                </div>
+                <div class="clear"></div>
+                <div class="line">
+                    <div class="label"><?php echo ($this->parameters["lang"] == "en") ? 'Message' : 'Mensaje'; ?> *</div>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <div class="clear"></div>
+                <div class="line">
+                    <label id="error"></label>
+                    <input type="submit" id="submit" value="<?php echo ($this->parameters["lang"] == "en") ? 'Submit' : 'Enviar'; ?>">
+                </div>
+            </form>
+            <hr>
+            <p><?php echo nl2br($this->contact["CAddress"]); ?></p>
+            <p><?php echo nl2br($this->contact["CPhone"]) ?></p>
+            <p><?php echo $this->contact["CGps"] ?></p>
+            <hr style="margin-bottom: 7px;">
+            <div class="facebook">
+                <div class="fb-like" data-href="https://www.facebook.com/pages/Hotel-el-Nevado/351196881651217?fref=ts" data-width="50" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                 <!--<a title="Facebook" href="http://www.facebook.com"><img src="<?php //echo $this->baseUrl() . "/imgs/facebook.png";   ?>" /></a>-->
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+
+</div>
+<script>
+    function is_valid_email(val) {
+        if (val != "") {
+            var filter = /^[0-9a-z_\-\.]+@[0-9a-z\-\.]+\.[a-z]{2,4}$/;
+            if (!filter.test(val)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+    $("form").submit(function() {
+        if ($("#email").val() == '') {
+            $("#error").html('* <?php echo ($this->parameters["lang"] == "en") ? 'E-mail is required' : 'Complete su E-Mail'; ?>');
+            $("#error").fadeIn();
+            $("#email").focus();
+            return false;
+        } else if (!is_valid_email($("#email").val())) {
+            $("#error").html('* <?php echo ($this->parameters["lang"] == "en") ? 'E-mail invalid' : 'El E-Mail no es válido'; ?>');
+            $("#error").fadeIn();
+            $("#email").focus();
+            return false;
+        } else if ($("#name").val() == '') {
+            $("#error").html('* <?php echo ($this->parameters["lang"] == "en") ? 'Name is required' : 'Complete su Nombre'; ?>');
+            $("#error").fadeIn();
+            $("#name").focus();
+            return false;
+        } else if ($("#subject").val() == '') {
+            $("#error").html('* <?php echo ($this->parameters["lang"] == "en") ? 'Subject is required' : 'Complete el asunto'; ?>');
+            $("#error").fadeIn();
+            $("#subject").focus();
+            return false;
+        } else if ($("#message").val() == '') {
+            $("#error").html('* <?php echo ($this->parameters["lang"] == "en") ? 'Message is required' : 'Complete el mensaje'; ?>');
+            $("#error").fadeIn();
+            $("#message").focus();
+            return false;
+        }
+        $("#submit").attr('disabled', true);
+        $("#error").fadeIn();
+        $("#error").html('<?php echo ($this->parameters["lang"] == "en") ? 'Sending, please wait ...' : 'Enviando, por favor espere ...'; ?>');
+        var url = "<?php echo $this->url(array('controller' => 'ajax', 'action' => 'index', 'lang' => $this->parameters["lang"]), null, true); ?>"; // the script where you handle the form input.
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#contact").serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                $("#error").fadeIn();
+                $("#error").html(data); // show response from the php script.
+                $("#email").val('');
+                $("#name").val('');
+                $("#subject").val('');
+                $("#message").val('');
+                $("#submit").attr('disabled', false);
+            }
+        });
+
+        return false;
+    });
+</script>

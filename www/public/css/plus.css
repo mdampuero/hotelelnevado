@@ -1,0 +1,268 @@
+/*
+ * Style twaks
+ * --------------------------------------------------
+ */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #428BCA;
+}
+
+.opciones{
+    text-align: center;
+}
+
+.opciones a:hover{
+    text-decoration: none;
+}
+
+body {
+  padding-top: 70px;
+  background: url(../img/bright_squares.png) repeat fixed;
+  overflow-x: hidden;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.jumbotron{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h1{
+    margin-bottom: 10px !important;
+}
+
+
+.noRadius{
+    border-radius: 0px !important;
+}
+
+.noRadiusBottom{
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+.iconNoPadding{
+    padding: 0 !important;
+}
+
+.logo{
+    width: 90px;
+}
+
+.blue{
+    background-color: #75C5FF;
+}
+
+.red{
+    background-color: #D9534F;
+}
+
+.gray{
+    background-color: #EEEEEE;
+}
+
+.green{
+    background-color: #5CB85C;
+}
+
+.yellow{
+    background-color: #F0AD4E;
+}
+
+.blue a{
+    color:#fff;
+}
+
+.blue:hover a{
+    color:inherit;
+}
+
+li.active{
+    background-color: #eee;
+}
+
+.colors{
+    background: url(../imgs/bgColors.jpg) no-repeat;
+}
+
+.whiteFont{
+    color:#fff;
+}
+
+.btn, a{
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+
+a label{
+    cursor: pointer;
+    padding:0 !important;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+
+td a:hover label{
+    color:#333 !important;
+}
+
+
+.table{
+    border-radius:4px;
+    border: 1px solid #e7e7e7;
+}
+
+.row{
+    margin: 0;
+}
+
+.navbar{
+    margin-bottom: 0;
+    border-radius:4px 4px 0px 0px;
+}
+
+.alert{
+    border-radius: 0;
+    margin-bottom: 0px !important;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+.navbar-form{
+    padding: 0;
+}
+
+.navbar-form .btn{
+    padding: 6px 10px 6px 10px;
+}
+.navbar-form .glyphicon-search{
+    color: #75C5FF;
+    cursor: pointer;
+}
+
+label.glyphicon{
+    margin: 0;
+}
+
+.form-container{
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px #e7e7e7 solid;
+    box-sizing: border-box;
+    border-radius:0px 0px 4px 4px;
+}
+
+.form-container .col-lg-4{
+    padding-left: 0px;
+}
+
+.dropdown-menu li label{
+    margin: 0px 5px 0px 5px;
+    padding: 3px;
+    vertical-align: baseline;
+}
+
+.formValid{
+    border-color: #468847;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.formInvalid{
+    border-color: #b94a48;
+    border-radius: 0px 4px 4px 0px !important;
+}
+
+textarea.formInvalid{
+    border-radius: 4px !important;
+}
+
+.popover-title{
+    background-color: #75C5FF;
+    color:#fff;
+}
+
+.hideTooltip *{
+    cursor: pointer;
+}
+
+/*Cambia color de iconos dentro del dropdown en hover de los anchor*/
+.dropdown-menu a label.glyphicon{
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+}
+
+.dropdown-menu a:hover label.glyphicon{
+    color:#fff !important;
+}
+
+.search{
+    margin-right: -10px !important;
+    padding-right: 5px !important;
+}
+
+.main-navbar{
+    margin-bottom: 0px !important;
+    border-radius:0px !important;
+}
+
+.navbar img{
+    height: 20px;
+}
+
+.main-progressbar{
+    border-radius: 0px !important;
+}
+
+.content{
+    margin-bottom: 40px !important;
+}
+
+/**/
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute !important;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}

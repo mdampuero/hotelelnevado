@@ -1,0 +1,11 @@
+.DS_Store
+/db/working/*
+/www/var/
+/www/web/bundles/*
+/www/web/uploads/*
+/www/vendor/*
+/www/app/config/parameters.yml
+.vscode
+/www/phpunit.xml
+*.log
+www/web/cache/

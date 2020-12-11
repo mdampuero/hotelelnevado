@@ -1,0 +1,22 @@
+<div class="popup">
+    <?php require_once 'Common.php'; ?><div class="slider">
+        <ul class="rslides">
+            <?php foreach ($this->images as $key => $result) { ?>
+                <li>
+                    <div class="image">
+                        <img src="<?php echo $this->baseUrl() . "/images/room/b_" . $result['IName'] ?>" />
+                        <div class="box">
+                            <div class="text">
+                                <p><?php echo CutText($this->result["RDescription"], 30) ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+    <div style="float: right; margin-top: 20px;">
+                    <div class="fb-like" data-href="https://www.facebook.com/pages/Hotel-el-Nevado/351196881651217?fref=ts" data-width="50" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
+    </div>
+</div>

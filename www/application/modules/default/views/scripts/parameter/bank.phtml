@@ -1,0 +1,12 @@
+<div class="popup">
+    <div class="logo">
+        <img src="<?php echo $this->baseUrl() . "/imgs/logo_gray.png";?>" />
+    </div>
+    <hr>
+    <p class="alert">
+        <?php echo ($this->parameters["lang"] == "en") ? 'BOOKING DEPOSIT ONLY<br>OR BANK TRANSFER' : 'RESERVAS ÚNICAMENTE CON DEPÓSITO<br>O TRANSFERENCIA BANCARIA'; ?>
+    </p>
+    <hr>
+    <p class="alert" style="text-align: left; margin-left: 100px; margin-right: 100px;"><?php echo nl2br($this->contact["CBank".$this->sufix]); ?></p>
+    <div class="alert note"><p><?php echo $this->contact["CNote".$this->sufix]; ?><p></div>
+</div>

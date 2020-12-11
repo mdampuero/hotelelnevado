@@ -1,0 +1,669 @@
+/*body {
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    min-width: 960px;
+     font-family: Arial, Helvetica, sans-serif;
+}
+div{
+   margin: 0px;
+    padding: 0px; 
+}
+.header{
+    background-color: #AAA;
+    height: 210px;
+    min-width: 960px;
+    width: 100%;
+}
+.width{
+    width: 960px;
+    margin: auto;
+}
+.menu{
+    background-color: #269abc;
+    height: 40px;
+    opacity: 0.8;
+    width: 100%;
+}
+.fixed {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.menu{
+    background-color: #269abc;
+    height: 40px;
+    width: 100%;
+}
+.menu ul {
+    width: 960px;
+    margin: auto;
+}
+.menu ul li {
+    line-height: 40px;
+    display: inline-block;
+    padding-right: 50px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.menu ul li a:hover {
+    text-decoration: underline;
+}*/
+* {margin: 0; padding: 0; outline: 0;}
+
+
+body {
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    color: #999;
+    font-size: 12px;
+    background:#bfbfbf;
+
+
+}
+
+
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin:0 0 15px 0;
+}
+
+
+h1 {
+    font-size: 36px;
+    letter-spacing: -2px;
+    line-height: 100%;
+}
+
+h1.title {
+    font-size: 46px;
+    font-weight: 700;
+    color: #6a6a6a;
+
+
+}
+
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+.menuBtn {
+
+    background: center center no-repeat transparent;
+    background: #000;
+    display: block;
+
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+
+}
+
+
+.clear {
+    clear: both;
+}
+.wrap {
+    /*background:url(../images/bg.png) top left repeat-x;*/
+    width: 100%;
+
+    min-width: 960px;
+    z-index: 10;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+
+
+.section {
+    width: 100%;
+    min-width: 960px;
+    z-index: 10;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+}
+
+
+.inner {
+    width: 960px;
+/*        border-left: #333 solid 1px;
+        border-right: #333 solid 1px;*/
+    margin: 0 auto;
+    position: relative;
+    padding:0px 0;
+    font-size: 18px;
+    font-weight: 300;
+    padding:0px 0;
+}
+
+
+/* This is the selector i used for my menu, it needs to be set as position:absolute; */
+.subMenu {
+    position: absolute;
+    top: 214px;
+    border-top: #5FB2D4 solid 4px;
+    height: 50px;
+    z-index: 1000;
+    width: 100%;
+    min-width: 960px;
+    background: #5C94B5;
+
+}
+
+.subMenu .inner {
+    padding:0;
+    font-weight: 400;
+}
+
+
+
+
+
+.subNavBtn {
+    display: block;
+    height: 35px;
+    /*margin-left: 10px;*/
+    width: 14%;
+    float: left;
+    margin: 0px 0px 0 0;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 15px 2% 0 4%;
+    text-align: center;
+    color: #fff;
+}
+
+.end {
+    margin: 0;
+}
+
+
+/* SECTIONS */
+.sTop {
+    /**/
+   
+/*    background-position-y: -30px;*/
+    min-height: 248px;
+
+}
+
+
+h1,h2{
+    font-family: 'Snippet', sans-serif;
+}
+.s1 {
+    padding: 30px 0px 0px 0px;
+    min-height: 390px;
+    background: #2e2e2e;
+    background:url(../imgs/bg_home.jpg) top left repeat;
+}
+
+
+.s2 {
+    color: #94A19A;
+    min-height: 420px;
+    background: #3f3f3f;
+    background:url(../imgs/bg_about.jpg) top left repeat;
+}
+.s2 h1{
+    background:url(../imgs/bg_s2.jpg) center left no-repeat;
+    padding-top: 30px;
+    height: 52px;
+    padding-left: 100px;
+}
+.s2 .icon{
+    width: 40px;
+    height: 60px;
+    background-color: #Fcc;
+}
+.s2 .middle{
+    color: #94A19A;
+    width: 50%;
+    float: left;
+    height: 320px;
+}
+.s2 .middle p{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.s2 .middle h1{
+    background:none;
+    padding-top: 30px;
+    padding-left: 0px;
+    font-size: 28px;
+}
+.s3 {
+    min-height: 500px;
+    background: #504f4f;
+    background:url(../imgs/bg_room.jpg) top left repeat;
+}
+.s3 h1{
+    background:url(../imgs/bg_s3.jpg) center left no-repeat;
+    padding-top: 30px;
+    height: 52px;
+    padding-left: 100px;
+}
+.s3 .col{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 470px;
+}
+.s3 .box{
+    background-color: #FFF;
+    border:#FFF solid 20px;
+    width: 430px;
+
+    margin-bottom: 15px;
+    height: 300px;
+    overflow: hidden;
+
+}
+.s3 .image{
+    height: 350px;
+    cursor: pointer;
+}
+.s3 .image{
+    /*filter: url('#grayscale');  Versión SVG para IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 */
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%); /* Para cuando es estándar funcione en todos */
+
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+
+.s3 .image:hover { 
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: none;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.s3 .image .view{
+    background-color: #111;
+    position: absolute;
+    width: 100px;
+    opacity: 0.8;
+    font-size: 12px;
+    line-height: 25px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+.s3 .col .aqua{
+    
+    margin-top: -110px;
+    margin-right: 40px;
+}
+.s3 .title{
+    background-color: #F4E8DA;
+    max-width: 400px;
+    min-width: 100px;
+    width: 200px;
+    height: 30px;
+    color: #848381;
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+.s4 {
+    min-height: 500px;
+    background: #6e87a1;
+    color: white;
+    background:url(../imgs/bg_tarifer.jpg) top left repeat;
+}
+.s4 h1{
+    background:url(../imgs/bg_s4.jpg) center left no-repeat;
+    padding-top: 30px;
+    height: 52px;
+    padding-left: 100px;
+}
+.s4 .col_4{
+    width: 230px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: #ccc;
+}
+.s4 .col_4 .title{
+    height: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #B4E8FF;
+    color: #4596C3;
+}
+.s4 .col_4 .boxImage{
+    overflow: hidden;
+    position: relative;
+    height: 230px;
+    border: #FFF solid 10px; 
+}
+.s4 .col_4 .boxImage img{
+    height: 230px; 
+}
+.s4 .col_4 .boxImage .view{
+    background-color: #111;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100px;
+    opacity: 0.8;
+    font-size: 12px;
+    line-height: 30px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+.s4 .col_4 .boxImage .price{
+    background:url(../imgs/price_flag.png) top right no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    padding-top: 5px;
+    width: 80px;
+    height: 100px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 24px;
+    cursor: pointer;
+}
+.s4 .col_4 .boxImage .price label{
+    font-weight: normal;
+    font-size: 14px;
+}
+.s4 .col_4 .boxImage .price hr{
+    margin-left:10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border:none;
+    border-bottom: #FBBC5D solid 1px;
+}
+.s4 hr{
+    border:none;
+    border-top: #D6EAF5 solid 1px;
+    margin-right: 10px;
+}
+.s4 a{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+}
+.s4 a:hover{
+    color: #EEE;
+}
+.s4 h2{
+    line-height: 80px;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    width: 260px;
+}
+.s4 .service{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100px;
+    float: left;
+    font-size: 10px;
+}
+.s4 .service img{
+    margin-bottom: 5px;
+}
+.col_2{
+    width: 50%;
+    float: left;
+    min-height: 150px;
+}
+.col_3{
+    width: 33%;
+    float: left;
+    min-height: 150px;
+}
+.s4 .button{
+    float: left;
+    width: 148px;
+    line-height: 40px;
+    border: #B5E9FE solid 1px;
+    height: 40px;
+    text-align: center;
+    background-color: #67AFD7;
+    color: #B5E9FE;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+.s4 .button:hover{
+    color: #D6EAF5;
+    text-decoration: none;
+    border: #D6EAF5 solid 1px;
+}
+.col_2 h2{
+    line-height: 50px;
+}
+.s5 {
+     font-size: 14px;
+    min-height: 450px;
+    background: #293b4d;
+    color: white;
+    background:url(../imgs/bg_contact.jpg) top left repeat;
+}
+.s5 h1{
+    background:url(../imgs/bg_s5.jpg) center left no-repeat;
+    padding-top: 30px;
+    height: 52px;
+    padding-left: 100px;
+}
+.s5 h1.contact{
+    background:url(../imgs/bg_s52.jpg) center left no-repeat;
+    padding-top: 30px;
+    height: 52px;
+    padding-left: 100px;
+}
+.s5 .line{
+    min-height: 50px;
+    font-size: 14px;
+    line-height: 35px;
+}
+.s5 .line input[type="text"]{
+    color: #666;
+    width: 350px;
+     float: right;
+    padding: 5px;
+    height: 20px;
+    line-height: 20px;
+    border: #ccc solid 1px;
+    background-color: #DCDCDC;
+}
+.s5 .line input[type="submit"]{
+    color: #666;
+    float: right;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 80px;
+    padding: 5px;
+    height: 30px;
+    line-height: 20px;
+    border: #ccc solid 1px;
+    background-color: #DCDCDC;
+}
+.s5 .line input[type="submit"]:hover{
+    color: #333;
+    
+    border: #EEE solid 1px;
+    background-color: #DCDCDC;
+}
+.s5 .line textarea{
+    width: 350px;
+    resize: none;
+     float: right;
+    color: #666;
+     font-family: Helvetica, Arial, Verdana, sans-serif;
+    padding: 5px;
+    height: 150px;
+    line-height: 20px;
+    border: #ccc solid 1px;
+    background-color: #DCDCDC;
+}
+.s5 .line .label{
+    float: left;
+    width: 110px;
+}
+.col_2{
+    line-height: 22px;
+     font-size: 15px;
+}
+.s5 hr{
+    border:none;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border-top: #D6EAF5 solid 1px;
+}
+/***************/ 
+#sTop{
+    background:url(../imgs/icon_home.png) no-repeat 60px 12px;
+}
+#sTop.active{
+    background:url(../imgs/icon_home_hover.png) #67AFD7 no-repeat 60px 12px;
+}
+#sTop:hover{
+    background:url(../imgs/icon_home_hover.png) #67AFD7 no-repeat 60px 12px;
+}
+/*******************/
+
+/***************/ 
+#s2{
+    background:url(../imgs/icon_about.png) no-repeat 10px 18px;
+}
+#s2.active{
+    background:url(../imgs/icon_about_hover.png) #67AFD7 no-repeat 10px 18px;
+}
+#s2:hover{
+    background:url(../imgs/icon_about_hover.png) #67AFD7 no-repeat 10px 18px;
+}
+/*******************/
+
+/***************/ 
+#s3{
+    background:url(../imgs/icon_reserve.png) no-repeat 40px 10px;
+}
+#s3.active{
+    background:url(../imgs/icon_reserve_hover.png) #67AFD7 no-repeat 40px 10px;
+}
+#s3:hover{
+    background:url(../imgs/icon_reserve_hover.png) #67AFD7 no-repeat 40px 10px;
+}
+/*******************/
+
+/***************/ 
+#s4{
+    background:url(../imgs/icon_tarifer.png) no-repeat 10px 10px;
+}
+#s4.active{
+    background:url(../imgs/icon_tarifer_hover.png) #67AFD7 no-repeat 10px 10px;
+}
+#s4:hover{
+    background:url(../imgs/icon_tarifer_hover.png) #67AFD7 no-repeat 10px 10px;
+}
+/*******************/
+
+/***************/ 
+#s5{
+    background:url(../imgs/icon_contact.png) no-repeat 10px 14px;
+}
+#s5.active{
+    background:url(../imgs/icon_contact_hover.png) #67AFD7 no-repeat 10px 14px;
+}
+#s5:hover{
+    background:url(../imgs/icon_contact_hover.png) #67AFD7 no-repeat 10px 14px;
+}
+/*******************/
+
+.footer{
+     font-family: 'Snippet', sans-serif;
+     box-shadow : inset 0 0 5px 0 #333;
+     
+    height: 40px;
+    background-color: #424242;
+    text-align: center;
+    color: #FFF;
+    line-height: 40px;
+    font-size: 12px;
+}
+.facebook{
+    float: right;
+    margin-top:179px;
+}
+.facebook_header{
+    position: absolute;
+   top:0px;
+    right: 0px;
+}
+.col_2 .facebook{
+    float: right;
+    margin-top:0px;
+}
+.col_2 #error{
+    display: none;
+    color: #F90;
+    margin-left: 120px;
+    line-height: 50px;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}

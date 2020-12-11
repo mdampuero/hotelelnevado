@@ -1,0 +1,56 @@
+<?php echo $this->partial('messages.phtml', array('messages' => $this->messages)); ?>
+<div class="form-container">
+    <blockquote>
+        <?php if ($this->title) { ?>
+            <p class="text-primary"><?php echo ($this->icon) ? '<label class="glyphicon glyphicon-' . $this->icon . '"></label> ' : ''; ?> <?php echo $this->title ?></p>
+        <?php } ?>
+        <?php if ($this->description) { ?>
+            <small><?php echo $this->description ?></small>
+        <?php } ?>
+    </blockquote>
+    <form id="userForm" method="post" novalidate enctype="multipart/form-data">
+        
+        <div class="form-group col-lg-4">
+            <label for="CBank">Datos bancarios *</label>
+            <textarea class="form-control" name="CBank" placeholder="Datos bancarios" data-validate="required"><?php echo $this->result['CBank']?></textarea>
+        </div>
+         <div class="form-group col-lg-4">
+            <label for="CBankEn">Datos bancarios Inglés*</label>
+            <textarea class="form-control" name="CBankEn" placeholder="Datos bancarios Inglés" data-validate="required"><?php echo $this->result['CBankEn']?></textarea>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-lg-4">
+            <label for="CCard">Tarjetas de Crédito </label>
+            <textarea class="form-control" name="CCard" placeholder="Tarjetas de Crédito"><?php echo $this->result['CCard']?></textarea>
+        </div>
+         <div class="form-group col-lg-4">
+            <label for="CCardEn">Tarjetas de Crédito Inglés</label>
+            <textarea class="form-control" name="CCardEn" placeholder="Tarjetas de Crédito Inglés"><?php echo $this->result['CCardEn']?></textarea>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-lg-4">
+            <label for="CMp">Mercado Pago </label>
+            <textarea class="form-control" name="CMp" placeholder="Mercado Pago"><?php echo $this->result['CMp']?></textarea>
+        </div>
+         <div class="form-group col-lg-4">
+            <label for="CMpEn">Mercado Pago Inglés</label>
+            <textarea class="form-control" name="CMpEn" placeholder="Mercado Pago Inglés"><?php echo $this->result['CMpEn']?></textarea>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-lg-4">
+            <label for="CNote">Nota </label>
+            <textarea class="form-control" name="CNote" placeholder="Nota"><?php echo $this->result['CNote']?></textarea>
+        </div>
+         <div class="form-group col-lg-4">
+            <label for="CNoteEn">Nota Inglés</label>
+            <textarea class="form-control" name="CNoteEn" placeholder="Nota Inglés"><?php echo $this->result['CNoteEn']?></textarea>
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <div class="btn-group">
+            <button type="submit" name="submit" class="btn btn-primary" data-loading-text="Validando...">Guardar</button>
+            <?php /* <button type="button" data-toggle="button" class="btn btn-info" data-rel="popover" data-content="asdasdasd" title="Información">Información</button> */ ?>
+           
+        </div>
+    </form>
+</div>

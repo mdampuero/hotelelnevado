@@ -1,0 +1,155 @@
+{
+    "info": {
+        "_postman_id": "c1016a18-df64-4698-b611-6e28216348a1",
+        "name": "Urdapilleta",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "Get all",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://urdapilleta.com/app_dev.php/api/demos/676f396c-f772-11ea-827d-93b3c7cdaf02",
+                    "protocol": "http",
+                    "host": [
+                        "urdapilleta.com"
+                    ],
+                    "path": [
+                        "urdapilleta",
+                        "www",
+                        "web",
+                        "app_dev.php",
+                        "api",
+                        "demos",
+                        "676f396c-f772-11ea-827d-93b3c7cdaf02"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get one",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://urdapilleta.com/app_dev.php/api/demos/676f396c-f772-11ea-827d-93b3c7cdaf02",
+                    "protocol": "http",
+                    "host": [
+                        "urdapilleta.com"
+                    ],
+                    "path": [
+                        "urdapilleta",
+                        "www",
+                        "web",
+                        "app_dev.php",
+                        "api",
+                        "demos",
+                        "676f396c-f772-11ea-827d-93b3c7cdaf02"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Mock - 9111\",\n    \"description\": \"Description mock - 91\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://urdapilleta.com/app_dev.php/api/demos",
+                    "protocol": "http",
+                    "host": [
+                        "urdapilleta.com"
+                    ],
+                    "path": [
+                        "urdapilleta",
+                        "www",
+                        "web",
+                        "app_dev.php",
+                        "api",
+                        "demos"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Edit",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Mock - 9111\",\n    \"description\": \"Description mock - 91\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://urdapilleta.com/app_dev.php/api/demos/beab055c-f77d-11ea-827d-93b3c7cdaf02",
+                    "protocol": "http",
+                    "host": [
+                        "urdapilleta.com"
+                    ],
+                    "path": [
+                        "urdapilleta",
+                        "www",
+                        "web",
+                        "app_dev.php",
+                        "api",
+                        "demos",
+                        "beab055c-f77d-11ea-827d-93b3c7cdaf02"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://urdapilleta.com/app_dev.php/api/demos/beab055c-f77d-11ea-827d-93b3c7cdaf02",
+                    "protocol": "http",
+                    "host": [
+                        "urdapilleta.com"
+                    ],
+                    "path": [
+                        "urdapilleta",
+                        "www",
+                        "web",
+                        "app_dev.php",
+                        "api",
+                        "demos",
+                        "beab055c-f77d-11ea-827d-93b3c7cdaf02"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}

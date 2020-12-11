@@ -1,0 +1,40 @@
+<!--<li role="presentation" class="dropdown-header">Gestion de contenido</li>-->
+<!-- Modulos no comunes de Usina2 aca! -->
+<!--<li class="divider"></li>-->
+<!--<li role="presentation" class="dropdown-header" style="white-space: nowrap;">Newsletters y suscriptores</li>-->
+<li>
+    <a data-rel="tooltipRight" title="Permite administrar Slider de Imágenes"
+       href="<?php echo $this->url(array('module'=>'admin','controller'=>'slider', 'action'=>'index'),'',true);?>">
+        <label class="glyphicon glyphicon-camera text-primary"></label> Slider de imágenes
+    </a>
+</li>
+<li>
+    <a data-rel="tooltipRight" title="Permite cambiar el contenido de la página Quienes Somos"
+       href="<?php echo $this->url(array('module'=>'admin','controller'=>'aboutus', 'action'=>'edit', 'id'=>'1'),'',true);?>">
+        <label class="glyphicon glyphicon-bookmark text-primary"></label> Página Quienes Somos
+    </a>
+</li>
+<li>
+    <a data-rel="tooltipRight" title="Permite Agregar, modificar y eliminar Imágenes de las habitaciones"
+       href="<?php echo $this->url(array('module'=>'admin','controller'=>'room', 'action'=>'index'),'',true);?>">
+        <label class="glyphicon glyphicon-tag text-primary"></label> Habitaciones
+    </a>
+</li>
+<li>
+    <a data-rel="tooltipRight" title="Permite cambiar los datos de contacto"
+       href="<?php echo $this->url(array('module'=>'admin','controller'=>'contact', 'action'=>'edit', 'id'=>'1'),'',true);?>">
+        <label class="glyphicon glyphicon-info-sign text-primary"></label> Página de Contacto
+    </a>
+</li>
+<li>
+    <a data-rel="tooltipRight" title="Permite cambiar los datos de contacto"
+       href="<?php echo $this->url(array('module'=>'admin','controller'=>'bank', 'action'=>'edit', 'id'=>'1'),'',true);?>">
+        <label class="glyphicon glyphicon-usd text-primary"></label> Página de Medios de Pago
+    </a>
+</li>
+<li>
+    <a data-rel="tooltipRight" title="Permite Agregar, modificar y eliminar Usuarios administradores"
+       href="<?php echo $this->url(array('module'=>'admin','controller'=>'user', 'action'=>'index'),'',true);?>">
+        <label class="glyphicon glyphicon-user text-primary"></label> Usuarios administradores
+    </a>
+</li>

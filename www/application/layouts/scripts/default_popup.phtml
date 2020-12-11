@@ -1,0 +1,37 @@
+<?php echo $this->doctype() . "\n"; ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+    <head>
+        <meta charset="utf-8">
+            <?php
+            echo $this->headTitle($this->translate('Hotel el Nevado'))->setSeparator(' - ')->setAutoEscape(false);
+            echo $this->headMeta()
+                    ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                    ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+
+            $this->headScript()->appendFile($this->baseUrl() . "/js/jquery.js")
+                    ->appendFile($this->baseUrl() . "/js/responsiveslides.js")
+                    ->appendFile($this->baseUrl() . "/js/slider_config.js");
+            echo $this->headScript();
+
+            $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->baseUrl() . '/img/favicon.png'))
+                    ->prependStylesheet($this->baseUrl() . '/css/style_popup.css')
+                    ->prependStylesheet($this->baseUrl() . "/css/slider_popup.css");
+            echo $this->headLink();
+            ?>
+            <link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'/>
+
+    </head>
+    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id))
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=538554892849925";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+    <body style="background-color: #FFF;">
+        <?php echo $this->layout()->content; ?>
+    </body>
+</html>

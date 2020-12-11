@@ -1,0 +1,48 @@
+<?php echo $this->partial('messages.phtml', array('messages' => $this->messages)); ?>
+<div class="form-container">
+    <blockquote>
+        <?php if ($this->title) { ?>
+            <p class="text-primary"><?php echo ($this->icon) ? '<label class="glyphicon glyphicon-' . $this->icon . '"></label> ' : ''; ?> <?php echo $this->title ?></p>
+        <?php } ?>
+        <?php if ($this->description) { ?>
+            <small><?php echo $this->description ?></small>
+        <?php } ?>
+    </blockquote>
+    <form id="userForm" method="post" novalidate enctype="multipart/form-data">
+        <div class="form-group col-lg-4">
+            <label for="CEmail">E-Mail *</label>
+            <input type="text" id="CEmail" name="CEmail" class="form-control" maxlength="64" placeholder="E-Mail" value="<?php echo $this->result['CEmail']?>" data-validate="required">
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-lg-4">
+            <label for="CPhone">Teléfonos *</label>
+            <textarea class="form-control" name="CPhone" placeholder="Teléfonos" data-validate="required"><?php echo $this->result['CPhone']?></textarea>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-lg-4">
+            <label for="CGps">Coordenadas GPS *</label>
+            <input type="text" id="CGps" name="CGps" class="form-control" maxlength="64" placeholder="Coordenadas GPS" value="<?php echo $this->result['CGps']?>" data-validate="required">
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-lg-4">
+            <label for="CAddress">Dirección *</label>
+            <textarea class="form-control" name="CAddress" placeholder="Dirección" data-validate="required"><?php echo $this->result['CAddress']?></textarea>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-lg-4">
+            <label for="CFooter">Pié de Página *</label>
+            <input type="text" id="CFooter" name="CFooter" class="form-control" maxlength="64" placeholder="Pié de página" value="<?php echo $this->result['CFooter']?>" data-validate="required">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="CFooterEn">Pié de Página Inglés*</label>
+            <input type="text" id="CFooter" name="CFooterEn" class="form-control" maxlength="64" placeholder="Pié de página Inglés" value="<?php echo $this->result['CFooterEn']?>" data-validate="required">
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <div class="btn-group">
+            <button type="submit" name="submit" class="btn btn-primary" data-loading-text="Validando...">Guardar</button>
+            <?php /* <button type="button" data-toggle="button" class="btn btn-info" data-rel="popover" data-content="asdasdasd" title="Información">Información</button> */ ?>
+           
+        </div>
+    </form>
+</div>

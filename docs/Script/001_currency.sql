@@ -1,0 +1,2 @@
+INSERT INTO `urdapilleta`.`currency` (`id`,`name`, `code`, `symbol`, `is_default`, `created_at`, `updated_at`, `is_delete`) VALUES (UUID(),'Peso Argentino', 'ARS', '$', '1', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '0');
+INSERT INTO `urdapilleta`.`currency` (`id`,`name`, `code`, `symbol`, `is_default`, `created_at`, `updated_at`, `is_delete`) VALUES (UUID(),'Dólar Estadounidense', 'USD', 'U$D', '0', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '0');

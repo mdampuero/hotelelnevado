@@ -1,0 +1,58 @@
+<?php
+if (!$this->image) {
+    ?>
+    <?php if ($this->messages) { ?>
+        <?php foreach ($this->messages as $message) { ?>
+            <div class="alert alert-<?php echo $message['type'] ?> noRadius alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <?php echo $message['message'] ?>
+            </div><br>
+        <?php } ?>
+    <?php }
+    ?>
+         <nav class="navbar navbar-default" role="navigation" style="padding-top: 10px;">    
+            
+    <form id="formUpload" method="post" name="formUpload" enctype="multipart/form-data">
+        <div class="form-group col-lg-4">
+            <label for="image">Seleccione una imagen desde su PC *</label>
+            <div class="input-group">
+                <span class="input-group-addon"><label class="glyphicon glyphicon-camera"></label></span>
+                <input type="file" id="image" name="image" class="form-control">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </form>
+         </nav>   
+    <?php
+} else {
+    ?>
+            <div class="form-container" style="text-align: center;">  
+    <div class="form-group" >
+        <div class="input-group" style="text-align: center; width: 100%;">
+            <a class="popup btn btn-info btn-large" href="javascript:acept();void(0);">
+                Aceptar</a> &nbsp;&nbsp;&nbsp;
+            <a class="popup btn btn-danger btn-large" href="<?php echo $this->url(array(null, null, null)); ?>">
+                Cancelar</a>
+                
+        </div>
+    </div>
+          
+            
+            <img id="photo" src="<?php echo $this->baseUrl() . "/" . $this->imageUrl; ?>">
+            </div>
+    <div class="clear"></div>
+    
+
+    <?php
+}
+?>
+<script>
+    $('#image').live('change', function()
+    {
+        document.formUpload.submit();
+    });
+    function acept() {
+        window.parent.addImage('<?php echo $this->image ?>');
+        parent.eval('$.prettyPhoto.close()');
+    }
+</script>

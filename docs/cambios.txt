@@ -1,0 +1,5 @@
+Error en la carga de habitaciones
+Error en la carga de fotos
+Error de google maps
+Se agrego la opcion de MP, con el QR en el modal y en el Administrador se agrego la opcion para cambiar los textos
+Se agrega opcion de WA

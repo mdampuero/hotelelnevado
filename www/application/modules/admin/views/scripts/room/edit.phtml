@@ -1,0 +1,125 @@
+<?php echo $this->partial('messages.phtml', array('messages' => $this->messages)); ?>
+<div class="form-container">
+    <blockquote>
+        <?php if ($this->title) { ?>
+            <p class="text-primary"><?php echo ($this->icon) ? '<label class="glyphicon glyphicon-' . $this->icon . '"></label> ' : ''; ?> <?php echo $this->title ?></p>
+        <?php } ?>
+        <?php if ($this->description) { ?>
+            <small><?php echo $this->description ?></small>
+        <?php } ?>
+    </blockquote>
+    <form id="userForm" method="post" novalidate > 
+        <div class="form-group col-lg-4">
+            <label for="RName">Nombre *</label>
+            <input type="text" id="RName" name="RName" class="form-control" maxlength="64" value="<?php echo $this->result['RName'] ?>" placeholder="Nombre" data-validate="required">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="RNameEn">Nombre Inglés*</label>
+            <input type="text" id="RNameEn" name="RNameEn" class="form-control" maxlength="64" value="<?php echo $this->result['RNameEn'] ?>" placeholder="Nombre Inglés" data-validate="required">
+        </div>
+        <div class="clearfix">
+
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="RTarifer">Precio por noche *</label>
+            <br>
+            <div class="col-xs-4">
+                <div class="input-group ">
+                    <span class="input-group-addon"><label class="glyphicon glyphicon-usd"></label></span>
+                    <input type="text" id="RTarifer" name="RTarifer" class="form-control" value="<?php echo $this->result['RTarifer'] ?>" placeholder="0.00" data-validate="required">
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="RDescription">Descripción *</label>
+            <textarea class="form-control" name="RDescription" placeholder="Descripción" data-validate="required"><?php echo $this->result['RDescription'] ?></textarea>
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="RDescriptionEn">Descripción Inglés*</label>
+            <textarea class="form-control" name="RDescriptionEn" placeholder="Description Inglés" data-validate="required"><?php echo $this->result['RDescriptionEn'] ?></textarea>
+        </div>
+        <div class="clearfix">
+
+        </div>
+        <a rel="prettyPhoto[iframe]" class="popup btn btn-warning btn-large" href="<?php
+        echo $this->url(array(
+            'module' => $this->parameters['module'],
+            'controller' => 'upload',
+            'action' => 'image', 'folder' => $this->folder));
+        ?>?iframe=true&amp;width=700&amp;height=500"><i class="glyphicon glyphicon-plus"></i>Agregar Foto</a>
+        <div class="clearfix">
+
+        </div><br/>
+        <div id='preview'>
+            <?php foreach ($this->images as $key => $result) { ?>
+                <div class="box" id="<?php echo $result["IDImage"] ?>">
+                    <div class="form-group col-lg-4">
+                        <input type="hidden" name="images[]" value="<?php echo $result["IName"] ?>">
+                        <div class="form-group" style="float: left;">
+                            <img style="border-radius: 4px;" src="<?php echo $this->baseUrl() . "/images/room/s_" . $result['IName'] ?>" />
+                            <label class="glyphicon glyphicon-arrow-up text-primary" onclick="up('<?php echo $result["IDImage"] ?>')"></label> &nbsp; 
+                            <label class="glyphicon glyphicon-arrow-down text-primary" onclick="down('<?php echo $result["IDImage"] ?>')"></label>&nbsp;&nbsp;
+                            <label class="glyphicon glyphicon-trash text-primary" onclick="trash('<?php echo $result["IDImage"] ?>')"></label>&nbsp;&nbsp;
+                        </div>
+                    </div><div class="clearfix"></div>
+                </div>
+            <?php } ?>
+        </div>
+        <div class="btn-group">
+            <button type="submit" name="submit" class="btn btn-primary" data-loading-text="Validando...">Guardar</button>
+            <?php /* <button type="button" data-toggle="button" class="btn btn-info" data-rel="popover" data-content="asdasdasd" title="Información">Información</button> */ ?>
+            <button type="button" class="btn btn-danger" onclick='location.href = "<?php echo $this->url(array('module' => $this->parameters['module'], 'controller' => $this->parameters['controller'], 'action' => 'index'), '', true) ?>"'>Cancelar</button>
+        </div>
+    </form>
+</div>
+<script>
+                                function addImage(name) {
+
+                                    id = Math.round((new Date()).getTime() / 1000);
+                                    $("#preview").append('<div class="box" id="' + id + '"></div>');
+                                    $('#' + id).html('\n\
+            <div class="form-group col-lg-4">\n\
+            <input type="hidden" name="images[]" value="' + name + '">\n\
+            <img src="<?php echo $this->baseUrl() . "/images/room/s_" ?>' + name + '" />&nbsp;&nbsp;\n\
+            <label class="glyphicon glyphicon-arrow-up text-primary" onclick="up(\'' + id + '\')"></label> &nbsp; \n\
+            <label class="glyphicon glyphicon-arrow-down text-primary" onclick="down(\'' + id + '\')"></label>&nbsp;&nbsp;\n\
+            <label class="glyphicon glyphicon-trash text-primary" onclick="trash(\'' + id + '\')"></label>&nbsp;&nbsp;\n\
+    </div>\n\
+<div class="clearfix"></div>');
+                                }
+                                function up(id) {
+                                    var count = $('#preview').find('div.box').length;
+                                    if (count > 1) {
+                                        var id_prev = ($('#' + id).prev().attr("id"));
+                                        if (id_prev != undefined) {
+                                            $('#' + id).slideUp("normal", function() {
+                                                $('#' + id).insertBefore('#' + id_prev);
+                                            });
+                                            $('#' + id).slideDown("normal");
+                                        }
+                                    }
+                                }
+                                function trash(id) {
+                                    $('#' + id).slideUp("normal", function() {
+                                        $('#' + id).empty();
+                                    });
+
+                                }
+                                function down(id) {
+                                    var count = $('#preview').find('div.box').length;
+                                    if (count > 1) {
+                                        var id_next = ($('#' + id).next().attr("id"));
+                                        if (id_next != undefined) {
+                                            $('#' + id).slideUp("normal", function() {
+                                                $('#' + id).insertAfter('#' + id_next);
+                                            });
+                                            $('#' + id).slideDown("normal");
+
+                                        }
+                                    }
+                                }
+<?php echo $this->javascript; ?>
+</script>

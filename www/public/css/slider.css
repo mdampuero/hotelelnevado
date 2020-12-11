@@ -1,0 +1,127 @@
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 940px;
+    padding: 0px;
+    margin: 0px;
+    
+    border: #FFF solid 10px;
+}
+
+.rslides li {
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides .image {
+    background-color: #CCC;
+    height: auto;
+    float: left;
+    height: 300px;
+    width: 940px;
+    border: 0;
+    overflow: hidden;
+    
+}
+
+.rslides img {
+    height: auto;
+    float: left;
+    border: 0;
+    width: 100%;
+}
+.rslides .image .box {
+    position: absolute;
+    top: 0px;
+    left: 270px;
+    padding: 40px;
+    background:url(../imgs/bg_box_slider.png) top left repeat;
+    float: left;
+    height: 300px;
+    width: 320px;
+    border: 0;
+}
+.rslides .image .box hr {
+    border: none;
+    border-top: #FFF solid 1px;
+}
+.rslides .image .box .text {
+    height: 200px;
+}
+.rslides .image .box h1{
+    font-family: 'Snippet', sans-serif;
+    text-align: center;
+    line-height: 20px;
+    font-size: 36px;
+    margin-top: 20px;
+    color: #FFF;
+    padding-bottom: 10px;
+}
+.rslides .image .box p{
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0px;
+    color: #FFF;
+    font-style: italic;
+}
+.rslides_tabs{
+/*    top: -278px;
+    left: 985px;*/
+/*top: 210px;
+margin-left: 986px;
+    position: absolute;*/
+width: 100%;
+
+text-align: center;
+}
+ul.rslides_tabs {
+    text-align: center;
+    float: none;
+    margin: auto;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+
+.rslides_tabs li{
+    list-style: none;
+    background-color:#5C94B5;
+    border-radius: 5px;
+    float: left;    
+    width: 10px;
+    height: 10px;
+    border: #FFF solid 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+}
+.rslides_tabs li a{
+    list-style: none;
+    color: #FFF;
+    text-decoration: none;
+    padding: 7px;
+    width: 20px;
+    
+    height: 20px;
+    
+}
+.rslides_tabs li:hover{
+     background-color: #A3E4FF;
+}
+.rslides_tabs .rslides_here{
+     background-color: #A3E4FF;
+}

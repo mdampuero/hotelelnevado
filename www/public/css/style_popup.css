@@ -1,0 +1,47 @@
+* {margin: 0; padding: 0; outline: 0;}
+
+
+body {
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    color: #999;
+    font-size: 12px;
+    background:#bfbfbf;
+
+
+}
+.popup{
+    width: 700px;
+    margin: auto;
+    padding: 0px;
+    color: #333;
+    font-size: 16px;
+    line-height: 25px;
+}
+.popup .note{
+    background-color: #FFF6C5;
+    margin-left: 80px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    margin-right: 80px;
+    text-align: left;
+}
+.popup hr{
+    border: none;
+    border-bottom: #333 solid 1px;
+    padding-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.popup .alert{
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    
+}
+.popup .logo{
+    padding-top: 20px;
+    width: 700px;
+    text-align: center;
+}

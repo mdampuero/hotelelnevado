@@ -1,0 +1,51 @@
+<div class="form-container">
+    <blockquote>
+        <?php if ($this->title) { ?>
+            <p class="text-primary"><?php echo ($this->icon) ? '<label class="glyphicon glyphicon-' . $this->icon . '"></label> ' : ''; ?> <?php echo $this->title ?></p>
+        <?php } ?>
+        <?php if ($this->description) { ?>
+            <small><?php echo $this->description ?></small>
+        <?php } ?>
+    </blockquote>
+    <form id="userForm" method="post" novalidate enctype="multipart/form-data"> 
+        <div class="form-group col-lg-4">
+            <label for="SName">Nombre *</label>
+            <input type="text" id="SName" name="SName" class="form-control" maxlength="64" placeholder="Nombre" data-validate="required">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="SNameEn">Nombre Inglés*</label>
+            <input type="text" id="SNameEn" name="SNameEn" class="form-control" maxlength="64" placeholder="Nombre en Inglés" data-validate="required">
+        </div>
+        <div class="clearfix">
+
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="SText">Descripción *</label>
+            <textarea class="form-control" name="SText" placeholder="Descripción" data-validate="required"></textarea>
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="STextEn">Descripción Inglés*</label>
+            <textarea class="form-control" name="STextEn" placeholder="Descripción Inglés" data-validate="required"></textarea>
+        </div>
+        <div class="clearfix">
+
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="SImage">Imagen *</label>
+            <div class="input-group">
+                <span class="input-group-addon"><label class="glyphicon glyphicon-camera"></label></span>
+                <input type="file" id="SImage" name="SImage" class="form-control" placeholder="Imagen" data-validate="required">
+            </div>
+        </div>
+        <div class="clearfix">
+
+        </div>
+        
+        <br>
+        <div class="btn-group">
+            <button type="submit" name="submit" class="btn btn-primary" data-loading-text="Validando...">Guardar</button>
+            <?php /* <button type="button" data-toggle="button" class="btn btn-info" data-rel="popover" data-content="asdasdasd" title="Información">Información</button> */ ?>
+            <button type="button" class="btn btn-danger" onclick='location.href = "<?php echo $this->url(array('module'=>$this->parameters['module'],'controller'=>$this->parameters['controller'], 'action' => 'index'), '', true) ?>"'>Cancelar</button>
+        </div>
+    </form>
+</div>
