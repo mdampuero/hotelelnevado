@@ -17,7 +17,7 @@
             echo $this->headScript();
 
             $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->baseUrl() . '/img/favicon.png'))
-                    ->prependStylesheet($this->baseUrl() . '/css/style_20201211.css')
+                    ->prependStylesheet($this->baseUrl() . '/css/style_20201221.css')
                     ->prependStylesheet($this->baseUrl() . '/fancy/source/jquery.fancybox.css?v=2.1.5')
                     ->prependStylesheet($this->baseUrl() . "/css/slider.css");
             echo $this->headLink();
@@ -86,9 +86,6 @@
                         js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=538554892849925";
                         fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk'));</script>
-                    <a href="https://api.whatsapp.com/send?phone=+5492616554911&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20hotel." class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
                     <div class="wrap">
                         <div class="subMenu" >
                             <div class="inner">
@@ -103,9 +100,13 @@
                         <div class="section sTop" style=" background:url(<?php echo $this->baseUrl() . "/imgs/" . $this->bg; ?>) #313131 center top no-repeat;">
                             <div class="inner">
                                 <a href="#" ><img src="<?php echo $this->baseUrl() . "/imgs/marca_hotel_el_nevado.png"; ?>"></a>
+                                <a href="https://api.whatsapp.com/send?phone=+5492616582349&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20hotel.">
+                                <div style="width:180px; box-shadow: 2px 2px 3px #999; font-weigth:bold; text-align:center; position:absolute;background-color:#25d366; color:#FFF; padding:8px; border-top-left-radius:10px;border-top-right-radius:10px;">
+                                    <i class="fa fa-whatsapp"></i> Consultas
+                                </div>
+                                </a>
                                 <div class="facebook">
                                     <a title="Español" href="<?php echo $this->url(array('lang' => 'es')); ?>"><img src="<?php echo $this->baseUrl() . "/imgs/esp.png"; ?>" /></a><a title="English" href="<?php echo $this->url(array('lang' => 'en')); ?>"><img src="<?php echo $this->baseUrl() . "/imgs/eng.png"; ?>" /></a>
-<!--<a title="Facebook" href="http://www.facebook.com"><img src="<?php //echo $this->baseUrl() . "/imgs/facebook.png";    ?>" /></a>-->
                                 </div>
                                 <div class="facebook_header">
                                                    <div class="fb-like" data-href="https://www.facebook.com/pages/Hotel-el-Nevado/351196881651217?fref=ts" data-width="50" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>

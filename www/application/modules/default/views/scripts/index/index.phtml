@@ -222,7 +222,13 @@
                     <input type="submit" id="submit" value="<?php echo ($this->parameters["lang"] == "en") ? 'Submit' : 'Enviar'; ?>">
                 </div>
             </form>
-            <hr>
+            
+                <a style="text-decoration:none;" href="https://api.whatsapp.com/send?phone=+5492616582349&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20hotel.">
+                    <div style="font-weigth:bold; color:#25d366; font-size:20px;">
+                        <i class="fa fa-whatsapp"></i> Consultas
+                    </div>
+                </a>
+                <br/>
             <p><?php echo nl2br($this->contact["CAddress"]); ?></p>
             <p><?php echo nl2br($this->contact["CPhone"]) ?></p>
             <p><?php echo $this->contact["CGps"] ?></p>
